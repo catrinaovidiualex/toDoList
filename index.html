@@ -5,22 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.0/css/all.css">
     <title>todo List</title>
 </head>
 <body>
-<h2>All items from the list:</h2>
-
-<ul>
-    <li>Item1</li>
-    <li>Item2</li>
-    <li>Item3</li>
-    <li>Item4</li>
-</ul>
-<input type="text" class="newitem"></input>
-<button class="adaugare">Add new item</button>
-<button class="stergere">Delete item</button>
-
     <img src="img/img1.png"></img>
+
+<div class="container">
+    <h1>All items from TODO list:</h1>
+        <div class="flex">
+            <input type="text" id="task" placeholder="Enter task">
+            <button>Submit</button>
+        </div>
+
+        <table>
+            <tr>
+                <td>Task</td>
+                <td>Status</td>
+                <td class="center">Delete</td>
+            </tr>
+            <tr>
+                <td>Creating new project with JS, CSS and HTML</td>
+                <td class="finished">Finished</td>
+                <td class="fa fa-trash"></td>
+            </tr>
+            <tr>
+                <td>Learning about DOM Manipulation</td>
+                <td class="inProgress">In Progress</td>
+                <td class="fa fa-trash"></td>
+            </tr>
+            <tr>
+                <td>Updating GitHub projects</td>
+                <td class="toDo">To Do</td>
+                <td class="fa fa-trash"></td>
+            </tr>
+        </table>
+        
+</div>
+
+
+
+
+
+    
 
     <script src="app.js"></script>
 </body>
