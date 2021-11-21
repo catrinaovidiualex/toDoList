@@ -1,12 +1,19 @@
 img{
-    width:25%;
-    height:25%;
-    margin-top:5px;
+    width:30%;
+    height:30%;
+    margin-left:5%;
+    
 }
 
 body{
     font-family:Arial;
-   
+    background-color:seashell;
+ 
+}
+body h1{
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
 }
 .container{
     width:90%;
@@ -27,21 +34,21 @@ h1{
 
 input{
     width:75%;
-    border:1px solid #D3D3D3;
+    border:1px solid rgb(224, 140, 15);;
     border-right:none;
     outline:none;
     padding:10px;
 }
 
 input:focus{
-    border:1px solid #8A60EB;
+    border:1px solid #6b3202;
 }
 
 button{
     width:25%;
     border:none;
     color:white;
-    background-color: rgb(29, 15, 224);
+    background-color: rgb(224, 140, 15);
     cursor:pointer;
     font-size:16px;
 }
@@ -50,11 +57,12 @@ table{
     margin-top:40px;
     width:100%;
     border-collapse: collapse;
+    
     text-align: left;
 }
 
 table td, table th{
-    border:1px solid #ddd;
+    border: 1px solid rgb(163, 95, 49);
     padding:8px;
 }
 
@@ -79,4 +87,11 @@ cursor:pointer;
 
 .toDo{
     color:red;
+}
+
+footer{
+    margin-top:5%;
+    font-size:13px;
+    text-align: center;
+    
 }

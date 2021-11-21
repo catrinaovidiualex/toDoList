@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.0/css/all.css">
-    <title>todo List</title>
+    <title>ToDo List</title>
 </head>
 <body>
-    <img src="img/img1.png"></img>
+    
 
-<div class="container">
-    <h1>All items from TODO list:</h1>
+   <div class="container">
+    
+    <img src="/img/todopic.png"></img>
+    <img src="/img/back.jpg"></img>
+    <h1>To Do list - All items</h1>
         <div class="flex">
-            <input type="text" id="task" placeholder="Enter task">
-            <button>Submit</button>
+            <input type="text" id="task" placeholder="Enter new task">
+            <button onclick="addTask()">Submit</button>
         </div>
 
         <table>
@@ -41,14 +44,12 @@
             </tr>
         </table>
         
-</div>
-
-
-
-
-
-    
+   </div>
+   
 
     <script src="app.js"></script>
+
+    <footer>&copy;2021 Copyright by Alex Catrina </footer> 
 </body>
+
 </html>

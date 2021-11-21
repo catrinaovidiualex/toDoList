@@ -16,6 +16,19 @@ status:"To Do"
 ];
 displayTable();
 
+//add new task function
+function addTask(){
+    let task=document.querySelector("#task");
+    tasks.push({
+        name: task.value,
+        status:"To Do"
+    });
+    tasks.value="";
+
+    displayTable();
+
+}
+
 function displayTable(){
     let table=document.querySelector("table");
 
@@ -25,16 +38,20 @@ function displayTable(){
         let status=document.createElement("td");
         let deleteTask=document.createElement("td");
 
-        name.innerText=tasks.taskName;
+        name.innerText=task.taskName;
+        status.innerText=task.status;
+        status.classList.add(task.status.toLocaleLowerCase());
+
+        deleteTask.classList.add("fa");
+        deleteTask.classList.add("fa-trash");
 
         tableRow.appendChild(name);
-        tableRow.appendChild(name);
+        tableRow.appendChild(status);
+        tableRow.appendChild(deleteTask);
+
+        table.appendChild(tableRow);
 
 
-
-
-
-
-    })
+    });
 }
 
