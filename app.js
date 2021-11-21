@@ -20,10 +20,10 @@ displayTable();
 function addTask(){
     let task=document.querySelector("#task");
     tasks.push({
-        name: task.value,
-        status:"To Do"
+        taskName: task.value,
+        status:"Todo"
     });
-    tasks.value="";
+    task.value="";
 
     displayTable();
 
@@ -70,7 +70,7 @@ function displayTable(){
         deleteTask.classList.add("fa-trash");
 
         deleteTask.setAttribute("onclick","deleteTask("+index+")");
-        status.setAttribute("onclick","updateStatus()");
+        status.setAttribute("onclick","updateStatus("+index+")");
         ++index;
 
         tableRow.appendChild(name);
