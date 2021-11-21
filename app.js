@@ -5,11 +5,11 @@ status:"Finished"
 
 },
 {taskName:"Learning about DOM Manipulation",
-status:"In Progress"
+status:"In-Progress"
 
 },
 {taskName:"Updating GitHub projects",
-status:"To Do"
+status:"Todo"
 
 }
 
@@ -29,8 +29,32 @@ function addTask(){
 
 }
 
+//updated status for clicked task
+function updateStatus(index){
+
+    let statuses=["Todo","In-Progress","Finished"];
+    let statusIndex=statuses.indexOf(tasks[index].status);
+    ++statusIndex;
+    if(statusIndex>2) statusIndex=0;
+    tasks[index].status=statuses[statusIndex];
+    displayTable();
+
+}
+
+function deleteTask(index){
+tasks.splice(index,1);
+displayTable();
+
+}
+
 function displayTable(){
     let table=document.querySelector("table");
+
+    while(table.childNodes.length>2){
+        table.removeChild(table.lastChild);
+    }
+
+    let index=0;
 
     tasks.forEach(task=>{
         let tableRow=document.createElement("tr");
@@ -44,6 +68,10 @@ function displayTable(){
 
         deleteTask.classList.add("fa");
         deleteTask.classList.add("fa-trash");
+
+        deleteTask.setAttribute("onclick","deleteTask("+index+")");
+        status.setAttribute("onclick","updateStatus()");
+        ++index;
 
         tableRow.appendChild(name);
         tableRow.appendChild(status);
